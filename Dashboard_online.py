@@ -419,7 +419,7 @@ html.Div(
         id='forecast-variable-dropdown',
         options=[{'label': col, 'value': col} for col in feature_data.columns if col not in ["Date", "Power (kW)"]],
         multi=True,
-        value=[],  # Initially no variables selected
+        value=["Power-1 (kW)"], 
         placeholder="Select variables for forecast",
     ),
                 ]),
@@ -722,9 +722,6 @@ metric_results = []
      State('metrics-dropdown', 'value')]
 )
 def perform_forecast(n_clicks, method, selected_variables, metric):
-    if n_clicks == 0:
-        return dash.no_update
-
 
     if method == 'linear_regression':
         # Perform linear regression forecast
