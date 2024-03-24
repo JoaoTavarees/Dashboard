@@ -34,7 +34,7 @@ def normalize_data(df, columns):
     return normalized_df
 
 app = dash.Dash(__name__)
-
+server = app.server
 app.layout = html.Div(
     children=[
         html.Title(children=["W3.CSS Template"]),
