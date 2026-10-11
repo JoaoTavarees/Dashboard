@@ -427,6 +427,16 @@ for i, t in enumerate([
 ]):
     SM[f"B{17 + i}"] = t
 
+SM["B24"] = "Note"
+SM["B24"].font = F_SEC
+for i, t in enumerate([
+    "The case cost base covers only the 25 new hires, overhead and G&A, so Luca generates cash every month",
+    "and runway is not a constraint. Next step before the board: add Luca's existing cost base (current team,",
+    "marketing, technology) to the model. That is where runway and the loan decision become relevant.",
+]):
+    SM[f"B{25 + i}"] = t
+    SM[f"B{25 + i}"].font = F_SUB
+
 for ws in wb.worksheets:
     ws.sheet_properties.tabColor = {"Summary": TEAL, "Assumptions": "F59E0B"}.get(ws.title, NAVY)
     ws.page_setup.orientation = "landscape"
