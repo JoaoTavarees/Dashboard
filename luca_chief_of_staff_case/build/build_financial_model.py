@@ -64,7 +64,6 @@ def month_header(ws, row=4, opening_label=None):
     ws[f"{TOT}{row}"] = "12-month total"
     style_range(ws, f"A{row}:{TOT}{row}", font=F_HDR, fill=FILL_HDR, align=Alignment(horizontal="center"))
     ws.cell(row=row, column=1).alignment = Alignment(horizontal="left")
-    ws.freeze_panes = ws[f"C{row + 1}"]
     ws.column_dimensions["A"].width = 44
     ws.column_dimensions["B"].width = 12
     for col in MC:
@@ -277,7 +276,6 @@ for col in "EFGIJK":
     LN[f"{col}31"] = f"=SUM({col}6:{col}17)"
     LN[f"{col}30"].number_format = LN[f"{col}31"].number_format = EUR if col in "EFG" else USD
 style_range(LN, "A30:L31", font=F_B, fill=FILL_TOT)
-LN.freeze_panes = "A6"
 LN.sheet_view.showGridLines = False
 
 # ---------------------------------------------------------------- Cash Flow (indirect)
