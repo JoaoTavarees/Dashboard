@@ -319,14 +319,16 @@ risks = [
 ]
 y = 2.0
 for num, head, acc, fill, bullets in risks:
-    rect(s, 7.1, y, 5.75, 2.3, fill, shape=5)
+    rect(s, 7.1, y, 5.75, 2.15, fill, shape=5)
     pill(s, 7.25, y + 0.15, 0.42, 0.42, num, fill=acc, size=14)
     text(s, 7.8, y + 0.12, 4.95, 0.5, [dict(t=head, size=12, bold=True, color=NAVY)], anchor=MSO_ANCHOR.MIDDLE)
-    text(s, 7.3, y + 0.68, 5.45, 1.6, [dict(t=b, size=10.2, bullet=True) for b in bullets], spacing=5)
-    y += 2.45
-text(s, 7.1, 6.88, 5.75, 0.25, [dict(
-    t="Note: the case cost base covers only the 25 new hires, overhead and G&A.", size=8.5, italic=True,
-    color=GREY)])
+    text(s, 7.3, y + 0.64, 5.45, 1.5, [dict(t=b, size=10, bullet=True) for b in bullets], spacing=4)
+    y += 2.25
+text(s, 7.1, 6.45, 5.75, 0.6, [dict(
+    t="Note: the case cost base covers only the 25 new hires, overhead and G&A, so Luca generates cash every "
+      "month and runway is not a constraint. Next step before the board: add Luca's existing cost base "
+      "(current team, marketing, technology) to the model. That is where runway and the loan decision "
+      "become relevant.", size=8.5, italic=True, color=GREY)])
 
 prs.save(OUT)
 print("saved", OUT)
