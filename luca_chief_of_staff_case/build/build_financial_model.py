@@ -430,9 +430,9 @@ for i, t in enumerate([
 SM["B24"] = "Note"
 SM["B24"].font = F_SEC
 for i, t in enumerate([
-    "The case cost base covers only the 25 new hires, overhead and G&A, so Luca generates cash every month",
-    "and runway is not a constraint. Next step before the board: add Luca's existing cost base (current team,",
-    "marketing, technology) to the model. That is where runway and the loan decision become relevant.",
+    "Runway isn't a real constraint in this case. Luca generates $0.9–1.5M of cash every month (about $13.6M",
+    "over the 12 months), and I don't have the company's overall cost base: the model only includes the",
+    "25 new hires, overhead and G&A.",
 ]):
     SM[f"B{25 + i}"] = t
     SM[f"B{25 + i}"].font = F_SUB

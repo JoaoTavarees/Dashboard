@@ -325,10 +325,9 @@ for num, head, acc, fill, bullets in risks:
     text(s, 7.3, y + 0.64, 5.45, 1.5, [dict(t=b, size=10, bullet=True) for b in bullets], spacing=4)
     y += 2.25
 text(s, 7.1, 6.45, 5.75, 0.6, [dict(
-    t="Note: the case cost base covers only the 25 new hires, overhead and G&A, so Luca generates cash every "
-      "month and runway is not a constraint. Next step before the board: add Luca's existing cost base "
-      "(current team, marketing, technology) to the model. That is where runway and the loan decision "
-      "become relevant.", size=8.5, italic=True, color=GREY)])
+    t="Note: runway isn't a real constraint in this case. Luca generates $0.9–1.5M of cash every month "
+      "(about $13.6M over the 12 months), and I don't have the company's overall cost base: the model only "
+      "includes the 25 new hires, overhead and G&A.", size=8.5, italic=True, color=GREY)])
 
 prs.save(OUT)
 print("saved", OUT)
