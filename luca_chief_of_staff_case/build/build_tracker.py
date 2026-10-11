@@ -19,11 +19,11 @@ F = lambda **k: Font(name="Arial", size=10, **k)
 
 STAGES = ["1. Brief & Content", "2. Script", "3. Visual Assets", "4. Motion", "5. Final Video", "Done"]
 SLA = {"1. Brief & Content": 1, "2. Script": 2, "3. Visual Assets": 1, "4. Motion": 2, "5. Final Video": 2}
-OWNERS = {"1. Brief & Content": ["Ana (Content)", "Luis (Content)"],
-          "2. Script": ["Sofía (Script)", "Diego (Script)", "Mariana (Script)"],
-          "3. Visual Assets": ["Carla (Design)", "Pablo (Design)"],
-          "4. Motion": ["Jorge (Motion)", "Valeria (Motion)"],
-          "5. Final Video": ["Rafa (Synthesia)", "Elena (Sound)"],
+OWNERS = {"1. Brief & Content": ["Content Author 1", "Content Author 2"],
+          "2. Script": ["Scriptwriter 1", "Scriptwriter 2", "Scriptwriter 3"],
+          "3. Visual Assets": ["Graphic Designer 1", "Graphic Designer 2"],
+          "4. Motion": ["Motion Designer 1", "Motion Designer 2"],
+          "5. Final Video": ["Synthesia Specialist 1", "Sound Editor 1"],
           "Done": ["—"]}
 BLOCKERS = ["", "Content misalignment / rework", "Waiting for input from previous stage",
             "Change request after lock", "Audio / video sync", "Capacity / not started", "Tool / technical issue"]
@@ -47,7 +47,7 @@ ws["D2"] = ("Teal headers = the 5 key fields. One row per video. The stage owner
 ws["D2"].font = F(italic=True, color="6B7280")
 
 cols = [("Unit ID", 10, False), ("Subject", 11, False), ("Grade", 13, False), ("Tier (A/B/C)", 9, False),
-        ("Stage", 18, False), ("Accountable owner", 18, True), ("Stage start date", 12, False),
+        ("Stage", 18, False), ("Accountable owner", 20, True), ("Stage start date", 12, False),
         ("Stage due date (SLA)", 13, True), ("Days in stage", 9, True), ("Days late", 8, False),
         ("Status", 11, False), ("Blocker reason", 32, True), ("Blocked since", 12, False),
         ("Rework loops", 9, True), ("Done date", 11, False), ("Target ship week", 9, False)]
